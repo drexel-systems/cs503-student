@@ -14,9 +14,7 @@ It uses the PATH variabale and searches each directory in order they appear in P
 
 5. In the referenced demo code we used WEXITSTATUS(). What information does this provide, and why is it important?
 
-
 6. Describe how your implementation of build_cmd_buff() handles quoted arguments. Why is this necessary?
-
 
 7. What changes did you make to your parsing logic compared to the previous assignment? Were there any unexpected challenges in refactoring your old code?
 
