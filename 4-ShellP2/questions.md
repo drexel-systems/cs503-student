@@ -12,7 +12,11 @@ It uses the PATH variabale and searches each directory in order they appear in P
 
 4. What is the purpose of calling wait() in the parent process after forking? What would happen if we didn’t call it?
 
+It waits for all children to complete. If we did not provide, a function we provided to execvp would instead assume control of the process.
+
 5. In the referenced demo code we used WEXITSTATUS(). What information does this provide, and why is it important?
+
+It's a system builtin function that returns the ext status of the child.
 
 6. Describe how your implementation of build_cmd_buff() handles quoted arguments. Why is this necessary?
 
