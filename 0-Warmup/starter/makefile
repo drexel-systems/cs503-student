@@ -3,7 +3,7 @@ CC = gcc
 CFLAGS = -Wall -Wextra -g
 
 # Target executable name
-TARGET = sdbsc
+TARGET = hello
 
 # Find all source and header files
 SRCS = $(wildcard *.c)
@@ -19,10 +19,13 @@ $(TARGET): $(SRCS) $(HDRS)
 # Clean up build files
 clean:
 	rm -f $(TARGET)
-	rm -f student.db
 
-test:
-	./test.sh
+test: $(TARGET)
+	bats $(wildcard ./bats/*.sh)
+
+valgrind:
+	echo "pwd\nexit" | valgrind --leak-check=full --show-leak-kinds=all --error-exitcode=1 ./$(TARGET) 
+	echo "pwd\nexit" | valgrind --tool=helgrind --error-exitcode=1 ./$(TARGET) 
 
 # Phony targets
-.PHONY: all clean
+.PHONY: all clean test

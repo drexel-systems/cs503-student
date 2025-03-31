@@ -1,13 +1,13 @@
 {
     "configurations": [
         {
-            "name": "(gdb) 3-ShellP1",
+            "name": "(gdb) 0-Warmup",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/3-ShellP1/starter/dsh",
+            "program": "${workspaceFolder}/0-Warmup/starter/hello",
             "args": [""],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}/3-ShellP1/starter",
+            "cwd": "${workspaceFolder}/0-Warmup/starter",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
@@ -23,7 +23,7 @@
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "Build 3-ShellP1"
+            "preLaunchTask": "Build 0-Warmup"
         }
     ]
 }

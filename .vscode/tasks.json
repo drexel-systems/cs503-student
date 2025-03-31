@@ -32,6 +32,22 @@
                 "$gcc"
             ],
             "detail": "Runs the 'make' command to build the project."
+        },
+        {
+            "label": "Build 0-Warmup",
+            "type": "shell",
+            "command": "make",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "cwd": "${workspaceFolder}/0-Warmup/starter"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Runs the 'make' command to build the project."
         }
     ]
 }
