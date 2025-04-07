@@ -71,7 +71,7 @@ int main(int argc, char *argv[]){
     //TODO: Allocate space for the buffer using malloc and
     //          handle error if malloc fails by exiting with a 
     //          return code of 99
-
+    buff = malloc(BUFFER_SZ);
 
     user_str_len = setup_buff(buff, input_string, BUFFER_SZ);     //see todos
     if (user_str_len < 0){
